@@ -12,15 +12,12 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2018.2.7f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -375,52 +372,93 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\AssemblyInfo.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\External\SemVersion.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\External\SemVersionExtension.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Common\ApplicationUtil.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Common\OperationSignal.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Common\Resources.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Common\ThreadedDelay.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Interfaces\IAddOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Interfaces\IBaseOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Interfaces\IListOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Interfaces\IOperationFactory.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Interfaces\IRemoveOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Interfaces\ISearchOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\OperationFactory.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\Package.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\PackageCollection.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\PackageFilter.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\PackageGroupOrigins.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\PackageInfo.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\PackageInfoListExtensions.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\PackageListExtensions.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\PackageOrigin.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\PackageState.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Packages\PackageTag.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Upm\UpmAddOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Upm\UpmBaseOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Upm\UpmListOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Upm\UpmOperationFactory.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Upm\UpmRemoveOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\Services\Upm\UpmSearchOperation.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\Common\Alert.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\Common\LoadingSpinner.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\Common\PopupField.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\Common\UIUtils.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\Common\VersionItem.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\Interfaces\IPackageManagerExtension.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\PackageDetails.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\PackageGroup.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\PackageItem.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\PackageList.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\PackageManagerExtensions.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\PackageManagerWindow.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\PackageSearchFilterTabs.cs" />
-    <Compile Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Sources\UI\PackagesLoading.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\AssemblyInfo.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\External\SemVersion.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\External\SemVersionExtension.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Common\ApplicationUtil.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Common\OperationSignal.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Common\Resources.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Common\ThreadedDelay.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IAddOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IBaseOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IListOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IOperationFactory.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IRemoveOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\ISearchOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\OperationFactory.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\Package.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageCollection.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageFilter.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageGroupOrigins.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageInfo.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageInfoListExtensions.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageListExtensions.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageOrigin.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageState.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageTag.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmAddOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmBaseOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmListOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmOperationFactory.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmRemoveOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmSearchOperation.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\Common\Alert.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\Common\LoadingSpinner.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\Common\PopupField.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\Common\UIUtils.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\Common\VersionItem.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\Interfaces\IPackageManagerExtension.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackageDetails.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackageGroup.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackageItem.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackageList.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackageManagerExtensions.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackageManagerWindow.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackageSearchFilterTabs.cs" />
+    <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackagesLoading.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+    <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+    <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+    <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Editor Resources\UI\Trackball.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\ACES.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\Blit.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\Bloom.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\Bloom.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\Common.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\FXAA.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\Fog.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\GrainGen.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\LutGen.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\TAA.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\TAA.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\Uber.shader" />
+    <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+    <None Include="Assets\GreenForest\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -438,23 +476,23 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Styles\Main_Dark.uss" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Styles\Main_Light.uss" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Templates\Alert.uxml" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Templates\PackageDetails.uxml" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Templates\PackageGroup.uxml" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Templates\PackageItem.uxml" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Templates\PackageList.uxml" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Templates\PackageManagerWindow.uxml" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Resources\Templates\PackagesLoading.uxml" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Editor\Unity.PackageManagerUI.Editor.asmdef" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.9.11\Tests\Editor\Unity.PackageManagerUI.EditorTests.asmdef" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Editor.asmdef" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.textmeshpro@1.2.4\Scripts\Editor\Unity.TextMeshPro.Editor.asmdef" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.textmeshpro@1.2.4\Scripts\Runtime\Unity.TextMeshPro.asmdef" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.textmeshpro@1.2.4\Tests\Editor\Unity.TextMeshPro.Editor.Tests.asmdef" />
-    <None Include="C:\Users\candap1\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.textmeshpro@1.2.4\Tests\Runtime\Unity.TextMeshPro.Tests.asmdef" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageDetails.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageGroup.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageItem.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageList.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageManagerWindow.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackagesLoading.uxml" />
+    <None Include="Packages\com.unity.package-manager-ui\Editor\Unity.PackageManagerUI.Editor.asmdef" />
+    <None Include="Packages\com.unity.package-manager-ui\Tests\Editor\Unity.PackageManagerUI.EditorTests.asmdef" />
+    <None Include="Packages\com.unity.standardevents\Editor\Editor.asmdef" />
+    <None Include="Packages\com.unity.textmeshpro\Scripts\Editor\Unity.TextMeshPro.Editor.asmdef" />
+    <None Include="Packages\com.unity.textmeshpro\Scripts\Runtime\Unity.TextMeshPro.asmdef" />
+    <None Include="Packages\com.unity.textmeshpro\Tests\Editor\Unity.TextMeshPro.Editor.Tests.asmdef" />
+    <None Include="Packages\com.unity.textmeshpro\Tests\Runtime\Unity.TextMeshPro.Tests.asmdef" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
