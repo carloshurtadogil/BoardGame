@@ -381,6 +381,7 @@
     <Compile Include="Assets\Scripts\Test.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\FantasyEnvironments\Environments\README.txt" />
     <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

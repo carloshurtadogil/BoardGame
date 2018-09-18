@@ -416,6 +416,7 @@
     <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMPro_UGUI_Private.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\FantasyEnvironments\Environments\README.txt" />
     <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
