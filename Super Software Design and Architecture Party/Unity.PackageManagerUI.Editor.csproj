@@ -460,6 +460,7 @@
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+    <None Include="Assets\Downloaded Assets\RainEntertainment\FantasyMonster\ForestTurtle\readMe.txt" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
