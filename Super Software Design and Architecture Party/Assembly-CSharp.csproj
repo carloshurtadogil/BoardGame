@@ -137,6 +137,7 @@
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\Downloaded Assets\RainEntertainment\RainEntertainment\FantasyMonster\RockWarrior\readMe.txt" />
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Resources\Shaders\Common.cginc" />
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
