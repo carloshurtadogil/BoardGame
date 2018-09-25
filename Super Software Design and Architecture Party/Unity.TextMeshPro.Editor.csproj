@@ -481,6 +481,7 @@
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Downloaded Assets\Wispy Sky\ReadMe.txt" />
+    <None Include="Assets\Downloaded Assets\infinite_happiness_free\README.txt" />
     <None Include="Assets\read me.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
