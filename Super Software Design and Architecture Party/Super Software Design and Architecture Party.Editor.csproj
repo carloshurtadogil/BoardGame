@@ -381,17 +381,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Super Software Design and Architecture Party.Plugins.csproj">
-      <Project>{D800BFD5-3F39-6F83-3F7D-6A9441CE4F79}</Project>
-      <Name>Super Software Design and Architecture Party.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="Super Software Design and Architecture Party.csproj">
       <Project>{031B99EF-45F6-E913-00E0-7B804012E80F}</Project>
       <Name>Super Software Design and Architecture Party</Name>
-    </ProjectReference>
-    <ProjectReference Include="Super Software Design and Architecture Party.Editor.Plugins.csproj">
-      <Project>{ACDCBE78-DF3C-1DA0-FC2C-967B2BF2B0ED}</Project>
-      <Name>Super Software Design and Architecture Party.Editor.Plugins</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.StandardEvents.csproj">
       <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
@@ -445,6 +437,7 @@
     <Compile Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Editor\Utils\EditorResources.cs" />
     <Compile Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Editor\Utils\FxStyles.cs" />
     <Compile Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
+    <Compile Include="Assets\Downloaded Assets\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Downloaded Assets\FantasyEnvironments\Environments\README.txt" />
@@ -490,7 +483,12 @@
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\Downloaded Assets\RainEntertainment\FantasyMonster\ForestTurtle\readMe.txt" />
-    <None Include="Assets\Downloaded Assets\RainEntertainment\RainEntertainment\FantasyMonster\RockWarrior\readMe.txt" />
+    <None Include="Assets\Downloaded Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Downloaded Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+    <None Include="Assets\Downloaded Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+    <None Include="Assets\Downloaded Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+    <None Include="Assets\Downloaded Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+    <None Include="Assets\Downloaded Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -510,12 +508,6 @@
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Downloaded Assets\Wispy Sky\ReadMe.txt" />
     <None Include="Assets\Downloaded Assets\infinite_happiness_free\README.txt" />
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
-    <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
-    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
-    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
-    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
     <None Include="Assets\read me.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
