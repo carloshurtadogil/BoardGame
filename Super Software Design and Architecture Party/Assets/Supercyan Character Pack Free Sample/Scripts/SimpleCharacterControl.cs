@@ -14,24 +14,24 @@ public class SimpleCharacterControl : MonoBehaviour {
     [SerializeField] private float m_jumpForce = 4;
     [SerializeField] private Animator m_animator;
     [SerializeField] private Rigidbody m_rigidBody;
-
     [SerializeField] private ControlMode m_controlMode = ControlMode.Direct;
+
+    private Vector3 m_currentDirection = Vector3.zero;
 
     private float m_currentV = 0;
     private float m_currentH = 0;
+
+    private float m_jumpTimeStamp = 0;
+    private float m_minJumpInterval = 0.25f;
+
+    private bool m_wasGrounded;
+    private bool m_isGrounded;
 
     private readonly float m_interpolation = 10;
     private readonly float m_walkScale = 0.33f;
     private readonly float m_backwardsWalkScale = 0.16f;
     private readonly float m_backwardRunScale = 0.66f;
 
-    private bool m_wasGrounded;
-    private Vector3 m_currentDirection = Vector3.zero;
-
-    private float m_jumpTimeStamp = 0;
-    private float m_minJumpInterval = 0.25f;
-
-    private bool m_isGrounded;
     private List<Collider> m_collisions = new List<Collider>();
 
     private void OnCollisionEnter(Collision collision)
@@ -52,6 +52,7 @@ public class SimpleCharacterControl : MonoBehaviour {
     private void OnCollisionStay(Collision collision)
     {
         ContactPoint[] contactPoints = collision.contacts;
+
         bool validSurfaceNormal = false;
         for (int i = 0; i < contactPoints.Length; i++)
         {
@@ -87,7 +88,30 @@ public class SimpleCharacterControl : MonoBehaviour {
         if (m_collisions.Count == 0) { m_isGrounded = false; }
     }
 
-	void Update () {
+    private void OnTriggerStay(Collider trigger)
+    {
+        if (trigger.transform.tag == "StairGoingUp")
+        {
+            if (!Input.GetButton("Jump") && Vector3.Angle(m_rigidBody.velocity, trigger.transform.forward) < 90)
+            {
+                if (m_rigidBody.velocity.y > 0)
+                {
+                    Vector3 vel = m_rigidBody.velocity;
+                    vel.y = 0;
+                    m_rigidBody.velocity = vel;
+                }
+            }
+        }
+        else if (trigger.transform.tag == "StairGoingDown")
+        {
+            if (!Input.GetButton("Jump") && Vector3.Angle(m_rigidBody.velocity, trigger.transform.forward) < 90)
+            {
+                m_rigidBody.AddForce(0, -500, 0);
+            }
+        }
+    }
+
+    void Update () {
         m_animator.SetBool("Grounded", m_isGrounded);
 
         switch(m_controlMode)
@@ -136,6 +160,12 @@ public class SimpleCharacterControl : MonoBehaviour {
 
     private void DirectUpdate()
     {
+        Move();
+        JumpingAndLanding();
+    }
+
+    private void Move()
+    {
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
 
@@ -156,7 +186,7 @@ public class SimpleCharacterControl : MonoBehaviour {
         direction.y = 0;
         direction = direction.normalized * directionLength;
 
-        if(direction != Vector3.zero)
+        if (direction != Vector3.zero)
         {
             m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
 
@@ -165,8 +195,6 @@ public class SimpleCharacterControl : MonoBehaviour {
 
             m_animator.SetFloat("MoveSpeed", direction.magnitude);
         }
-
-        JumpingAndLanding();
     }
 
     private void JumpingAndLanding()
@@ -189,4 +217,12 @@ public class SimpleCharacterControl : MonoBehaviour {
             m_animator.SetTrigger("Jump");
         }
     }
+
+    /* IN PROGRESS (Stair Movement Physics)
+     * - Christine
+    private void StairTrigger(Collider stairTrigger)
+    {
+        
+    }
+    */
 }
