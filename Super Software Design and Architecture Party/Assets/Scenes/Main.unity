@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.34744054, g: 0.4146754, b: 0.4977309, a: 1}
+  m_IndirectSpecularColor: {r: 0.34739882, g: 0.41475335, b: 0.49778283, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -845,29 +845,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
-    - target: {fileID: 4703993022139486, guid: 5d3c7d3bce670ba4cbbd564d8d60d26c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 10.000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703993022139486, guid: 5d3c7d3bce670ba4cbbd564d8d60d26c, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.099999994
-      objectReference: {fileID: 0}
     - target: {fileID: 1116399098182704, guid: 5d3c7d3bce670ba4cbbd564d8d60d26c, type: 2}
       propertyPath: m_Name
       value: Negaspace (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703993022139486, guid: 5d3c7d3bce670ba4cbbd564d8d60d26c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703993022139486, guid: 5d3c7d3bce670ba4cbbd564d8d60d26c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -19.281
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703993022139486, guid: 5d3c7d3bce670ba4cbbd564d8d60d26c, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 10.000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d3c7d3bce670ba4cbbd564d8d60d26c, type: 2}
@@ -6195,28 +6175,8 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1591907481568132, guid: 1d6ad4d8702852541b95327eaa44d995, type: 2}
-      propertyPath: m_TagString
-      value: Neutral Space
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591907481568132, guid: 1d6ad4d8702852541b95327eaa44d995, type: 2}
       propertyPath: m_Name
       value: Neutral space (30)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4138832104993968, guid: 1d6ad4d8702852541b95327eaa44d995, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 10.000106
-      objectReference: {fileID: 0}
-    - target: {fileID: 4138832104993968, guid: 1d6ad4d8702852541b95327eaa44d995, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 10.000106
-      objectReference: {fileID: 0}
-    - target: {fileID: 4138832104993968, guid: 1d6ad4d8702852541b95327eaa44d995, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4138832104993968, guid: 1d6ad4d8702852541b95327eaa44d995, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 128.69101
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d6ad4d8702852541b95327eaa44d995, type: 2}
