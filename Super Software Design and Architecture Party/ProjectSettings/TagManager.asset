@@ -7,6 +7,8 @@ TagManager:
   - Neutral Space
   - StairGoingDown
   - StairGoingUp
+  - Diamond
+  - Nega Space
   layers:
   - Default
   - TransparentFX
