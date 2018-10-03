@@ -150,6 +150,7 @@
     <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\Scripts\CardGenerator.cs" />
     <Compile Include="Assets\Scripts\FirstPersonCam.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\CameraLogic.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\Demo.cs" />
