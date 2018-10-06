@@ -14,7 +14,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 43
+    y: 44
     width: 1920
     height: 1007
   m_ShowMode: 4
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 23
+  controlID: 54
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 24
+  controlID: 55
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 25
+  controlID: 56
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -362,15 +362,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 92
+    y: 94
     width: 214
     height: 659
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1a450600
-    m_LastClickedID: 410906
-    m_ExpandedIDs: f816f1ffa62bf1ffe262f1ff9069f2ffe889f3ff00000000cc3e0600f241060016470600
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 728af3ff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 218
-    y: 92
+    y: 94
     width: 1423
     height: 659
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.015371379, y: -0.98272246, z: 0.1575951, w: -0.09584571}
     speed: 2
-    m_Value: {x: -0.015371361, y: -0.98272127, z: 0.1575949, w: -0.095845595}
+    m_Value: {x: 0.01537138, y: 0.9827225, z: -0.15759511, w: 0.095845714}
   m_Size:
     m_Target: 76.852455
     speed: 2
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 772
+    y: 774
     width: 1641
     height: 256
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -611,21 +611,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Supercyan Character Pack Free Sample/Prefabs/Simple Movement/Mobile
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Supercyan Character Pack Free Sample/Prefabs/Simple Movement/Mobile
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Documents\Github\BoardGame\Super Software Design and Architecture
-    Party
+  m_LastProjectPath: /Users/carloshurtado/Desktop/Master Folder/CSULB/Fall 2018/CECS
+    445/Project Git/BoardGame/Super Software Design and Architecture Party
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 133}
-    m_SelectedIDs: d8380600
-    m_LastClickedID: 407768
-    m_ExpandedIDs: 00000000d03606001437060016370600623706009e3706005c3806007e38060014390600d6390600303a0600643b0600123c06009c3c0600183d0600283d0600323d0600624a0600644a0600664a0600684a06006a4a06006c4a06006e4a0600704a0600724a0600744a0600764a0600784a06007a4a06007c4a06007e4a0600804a0600824a0600844a060000ca9a3b
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: 64380600
+    m_LastClickedID: 407652
+    m_ExpandedIDs: 0000000064380600aa380600ac380600f43806002a390600e4390600023a06008e3a0600463b06009e3b0600c43c0600643d0600e23d06005c3e06006a3e0600743e0600124b0600144b0600164b0600184b06001a4b06001c4b06001e4b0600204b0600224b0600244b0600264b0600284b06002a4b06002c4b06002e4b0600304b0600324b0600344b0600
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -653,7 +653,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d036060016370600623706009e3706005c3806007e380600d6390600303a06002a3b0600643b06009c3c0600183d0600283d0600323d0600624a0600644a0600664a0600684a06006a4a06006c4a06006e4a0600704a0600724a0600744a0600764a0600784a06007a4a06007c4a06007e4a0600804a0600824a0600844a0600
+    m_ExpandedIDs: 0000000064380600aa380600ac380600f43806002a390600e4390600023a06008e3a0600463b06009e3b0600c43c0600643d0600e23d06005c3e06006a3e0600743e0600124b0600144b0600164b0600184b06001a4b06001c4b06001e4b0600204b0600224b0600244b0600264b0600284b06002a4b06002c4b06002e4b0600304b0600324b0600344b0600
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1645
-    y: 92
+    y: 94
     width: 275
     height: 936
   m_PersistentViewDataDictionary: {fileID: 0}
