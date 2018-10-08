@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardGenerator : MonoBehaviour {
 
@@ -14,8 +15,8 @@ public class CardGenerator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        Draw();
+    }
 
     //Draw a card at random and instantiate it to the world. Includes animation
     public void Draw() {
@@ -27,6 +28,7 @@ public class CardGenerator : MonoBehaviour {
         //    we do not yet need to attach the cards to any players during this sprint.
         // If you have any questions, please do not hesitate in letting me know. THANK YOU!!!!
         int index = 0;
+       index = Random.Range(0, cards.Length);
         Instantiate(cards[index], new Vector3(0.0f, 22.0f, 0.0f), Quaternion.identity);
     }
 
@@ -34,11 +36,13 @@ public class CardGenerator : MonoBehaviour {
     public void ScaleCards() {
         if (cards.Length > 0)
         {
-            Vector3 scale = new Vector3(2.0f, 2.0f, 2.0f); //Standard scale for now
-            for (int i = 0; i < cards.Length; i++)
+            Vector3 scale = new Vector3(50f, 50f, 50f); //Standard scale for now
+            Vector3 two = new Vector3(2f, 2f, 2f);
+            for (int i = 1; i < cards.Length; i++)
             {
                 cards[i].gameObject.transform.localScale = scale;
             }
+            cards[0].gameObject.transform.localScale = two;
         }
     }
 }
