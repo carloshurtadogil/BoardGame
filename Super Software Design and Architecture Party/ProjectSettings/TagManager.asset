@@ -9,6 +9,7 @@ TagManager:
   - StairGoingUp
   - Diamond
   - Nega Space
+  - Card
   layers:
   - Default
   - TransparentFX
