@@ -32923,7 +32923,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1968476592218994, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 2}
       propertyPath: m_Name
-      value: LionBoy
+      value: McDee
       objectReference: {fileID: 0}
     - target: {fileID: 1258019779867072, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 2}
       propertyPath: m_Name
