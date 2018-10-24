@@ -11601,7 +11601,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 0.5}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.63, z: 2.15}
 --- !u!54 &654509272
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15159,7 +15159,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 0.5}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.63, z: 2.15}
 --- !u!54 &887850649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15973,7 +15973,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 0.5}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.63, z: 2.15}
 --- !u!1001 &938399948
 Prefab:
   m_ObjectHideFlags: 0
@@ -18560,7 +18560,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1968476592218994, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -27016,7 +27016,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 0.5}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.63, z: 2.15}
 --- !u!54 &1515537822
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31676,7 +31676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1754289046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32985,7 +32985,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 0.5}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.63, z: 2.15}
 --- !u!54 &1823998371
 Rigidbody:
   m_ObjectHideFlags: 0
