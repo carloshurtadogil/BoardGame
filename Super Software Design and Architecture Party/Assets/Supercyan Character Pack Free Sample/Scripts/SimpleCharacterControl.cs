@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections.Generic;
 
-public class SimpleCharacterControl : MonoBehaviour {
+public class SimpleCharacterControl : NetworkBehaviour {
 
     private enum ControlMode
     {
@@ -33,6 +34,7 @@ public class SimpleCharacterControl : MonoBehaviour {
     private readonly float m_backwardRunScale = 0.66f;
 
     private List<Collider> m_collisions = new List<Collider>();
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -111,7 +113,22 @@ public class SimpleCharacterControl : MonoBehaviour {
         }
     }
 
+    void Start()
+    {
+        if (isLocalPlayer)
+        {
+            Quaternion q = Quaternion.Euler(12.0f, 0, 0);
+            Camera.main.transform.position = new Vector3(0.0f, 15.0f,  -20f);//this.transform.position*10 - this.transform.forward * 20 + this.transform.up *10;
+            Camera.main.transform.rotation = q;//LookAt(this.transform.position*20);
+            Camera.main.transform.parent = this.transform;
+        }
+    }
+
     void Update () {
+        if (!isLocalPlayer)//Gives everyone control of their own character
+        {
+            return;
+        }
         m_animator.SetBool("Grounded", m_isGrounded);
 
         switch(m_controlMode)
