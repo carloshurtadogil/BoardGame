@@ -1354,7 +1354,7 @@ MonoBehaviour:
     i14: 209
     i15: 42
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114723716315922654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   pathObject: {fileID: 1682189731081722}
-  MyPath: {fileID: 114399882087776030, guid: 1ff5aa800d1ed604883a71e82231543a, type: 2}
+  MyPath: {fileID: 114393144873401292, guid: 1ff5aa800d1ed604883a71e82231543a, type: 2}
   Speed: 20
   MaxDistanceToGoal: 0.1
 --- !u!114 &114946094261069124
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1682189731081722}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
