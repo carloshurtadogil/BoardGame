@@ -163,6 +163,7 @@
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\CameraLogic.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\Demo.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\SimpleCharacterControl.cs" />
+    <None Include="Assets\Fantasy Harp Album - 010118\Notes.txt" />
     <None Include="Assets\Downloaded Assets\GreenForest\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Downloaded Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
