@@ -26,6 +26,12 @@ public class MovementPath : MonoBehaviour
 
     // (Unity Named Methods)
     #region Main Methods
+
+    private void Start()
+    {
+        movingTo = 0;
+        movementDirection = 1;
+    }
     //Update is called by Unity every frame
     void Update()
     {
@@ -77,7 +83,7 @@ public class MovementPath : MonoBehaviour
         {
             yield break; //Exits the Coroutine sequence length check fails
         }
-
+        movingTo = 0;
         while(true) //Does not infinite loop due to yield return!!
         {
             //Return the current point in PathSequence

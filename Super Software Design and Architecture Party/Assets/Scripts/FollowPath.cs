@@ -84,6 +84,14 @@ public class FollowPath : NetworkBehaviour
                 Vector3.MoveTowards(transform.position,
                                     pointInPath.Current.position,
                                     Time.deltaTime * Speed);
+            if (MyPath.movingTo == 2)
+            {
+                Debug.Log("Reached");
+                Vector3 dir = MyPath.PathSequence[2].transform.position - gameObject.transform.position;
+                float step = 3.0f * Time.deltaTime;
+                Vector3 newDir = Vector3.RotateTowards(transform.forward, dir, step, 0.0f);
+                gameObject.transform.rotation = Quaternion.LookRotation(newDir);//Quaternion.Euler(0,-90,0);
+            }
         }
         else if (Type == MovementType.LerpTowards) //If you are using LerpTowards movement type
         {
