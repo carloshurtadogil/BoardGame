@@ -31,6 +31,9 @@ public class FollowPath : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
+            
+            gameObject.transform.position = MyPath.PathSequence[0].transform.position;
+            Debug.Log("Player: "+gameObject.transform.position);
             Quaternion q = Quaternion.Euler(12.0f, 0, 0);
             Camera.main.transform.position = new Vector3(0.0f, 15.0f, -20f);//this.transform.position*10 - this.transform.forward * 20 + this.transform.up *10;
             Camera.main.transform.rotation = q;//LookAt(this.transform.position*20);
