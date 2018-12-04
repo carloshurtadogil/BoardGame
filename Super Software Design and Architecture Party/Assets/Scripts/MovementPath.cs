@@ -68,7 +68,7 @@ public class MovementPath : MonoBehaviour
 
     //(Custom Named Methods)
     #region Utility Methods 
-
+    public int Spaces { get; set; }
     #endregion //Utility Methods
 
     //Coroutines run parallel to other fucntions

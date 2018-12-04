@@ -11,6 +11,7 @@ TagManager:
   - Nega Space
   - Card
   - MyPath
+  - Card Generator
   layers:
   - Default
   - TransparentFX

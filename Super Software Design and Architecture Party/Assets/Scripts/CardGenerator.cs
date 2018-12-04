@@ -31,7 +31,7 @@ public class CardGenerator : MonoBehaviour
     }
 
     //Draw a card at random and instantiate it to the world. Includes animation
-    IEnumerator Draw()
+    public IEnumerator Draw()
     {
         float x = 90.0f; //Card is face down when instantiated
         int index = Random.Range(0, cards.Length);//Select a random card
