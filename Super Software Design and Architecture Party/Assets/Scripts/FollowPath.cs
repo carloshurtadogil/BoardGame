@@ -94,7 +94,6 @@ public class FollowPath : NetworkBehaviour
                                         pointInPath.Current.position,
                                         Time.deltaTime * Speed);
                 animator.Play("run", 1);
-                Debug.Log("Moving to " + MyPath.movingTo);
                 if (MyPath.movingTo == 2  || MyPath.movingTo == 40) //|| MyPath.movingTo == 6 || MyPath.movingTo == 16)
                 {
                     //TurnTo(MyPath.movingTo);

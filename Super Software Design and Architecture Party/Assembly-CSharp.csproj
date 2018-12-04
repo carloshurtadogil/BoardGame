@@ -150,6 +150,13 @@
     <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Downloaded Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\FPS_Minigame\FPS Scripts\Billboard.cs" />
+    <Compile Include="Assets\FPS_Minigame\FPS Scripts\Bullet.cs" />
+    <Compile Include="Assets\FPS_Minigame\FPS Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\FPS_Minigame\FPS Scripts\Health.cs" />
+    <Compile Include="Assets\FPS_Minigame\FPS Scripts\LocalHealthbar.cs" />
+    <Compile Include="Assets\FPS_Minigame\FPS Scripts\PlayerController.cs" />
+    <Compile Include="Assets\FPS_Minigame\FPS Scripts\TimerCountdown.cs" />
     <Compile Include="Assets\Scripts\Addodatabase.cs" />
     <Compile Include="Assets\Scripts\CardGenerator.cs" />
     <Compile Include="Assets\Scripts\DataManager.cs" />
