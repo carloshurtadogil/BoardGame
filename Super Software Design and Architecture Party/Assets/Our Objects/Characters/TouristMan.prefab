@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 81601270466750152}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1360,6 +1360,12 @@ MonoBehaviour:
   MyPath: {fileID: 114393144873401292, guid: 1ff5aa800d1ed604883a71e82231543a, type: 2}
   Speed: 20
   MaxDistanceToGoal: 0.1
+  costumes:
+  - {fileID: 1593341411408318, guid: 6396b595ca97e4913b9c7b21b9cea5ce, type: 2}
+  - {fileID: 1068156261414320, guid: b590851213ebd4709a9c293e07cc59c7, type: 2}
+  - {fileID: 1432652411589780, guid: bbe3cd9f6288143799a71e4c9bd36dd9, type: 2}
+  - {fileID: 1942736281380456}
+  backupCam: {fileID: 1781137564411688, guid: 4634bc80374ea4d8eafa54932d9d3268, type: 2}
 --- !u!114 &114578253355961056
 MonoBehaviour:
   m_ObjectHideFlags: 1

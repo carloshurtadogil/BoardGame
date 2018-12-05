@@ -19,6 +19,9 @@ public class FollowPath : NetworkBehaviour
     public MovementPath MyPath; // Reference to Movement Path Used
     public float Speed = 1; // Speed object is moving
     public float MaxDistanceToGoal = .1f; // How close does it have to be to the point to be considered at point
+    public GameObject[] costumes;
+    public GameObject backupCam;
+    public GameObject[] spawnPoints;
     #endregion //Public Variables
 
     #region Private Variables
@@ -31,6 +34,7 @@ public class FollowPath : NetworkBehaviour
     private bool isTurn = true;
     private bool one = false;
     private CardGenerator cg;
+    private GameMaster gm;
     #endregion //Private Variables
 
     // (Unity Named Methods)
@@ -193,10 +197,43 @@ public class FollowPath : NetworkBehaviour
         //canMove = true;
     }
 
+    public override void OnStartLocalPlayer()
+    {
+        Debug.Log("Reached Local");
+        StartCoroutine("Waiting");
+
+        Debug.Log("Done waiting");
+
+    }
+
+    [Command]
+    public void CmdSpawn(int c, int s)
+    {
+        GameObject go = Instantiate(costumes[c], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        NetworkServer.SpawnWithClientAuthority(go, connectionToClient);
+        Camera.main.transform.parent = go.transform;
+        Destroy(gameObject);
+    }
+
     #endregion //Utility Methods
 
     //Coroutines run parallel to other fucntions
     #region Coroutines
+
+    public IEnumerator Waiting() {
+        Debug.Log("Waiting on CoRoutine");
+        print(Time.time);
+        yield return new WaitForSeconds(5);
+        print(Time.time);
+        Debug.Log("Finished cCoroutine");
+        gm = GameObject.FindGameObjectWithTag("Master").GetComponent<GameMaster>();
+        Debug.Log("Currently there are " + gm.GetCurrentAmount() + " players on the field");
+        if (gm.GetCurrentAmount() == 1 || gm.GetCurrentAmount() == 2)
+        {
+            Debug.Log("Past If");
+            CmdSpawn(0, 1);
+        }
+    }
 
     #endregion //Coroutines
 }

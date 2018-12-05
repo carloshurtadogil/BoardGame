@@ -51,7 +51,6 @@ public class GameController : MonoBehaviour
                 {
                     create.gameObject.SetActive(false);
                     join.gameObject.SetActive(false);
-                    manager.playerPrefab = playerPrefabs[0];
                    
                     manager.SetMatchHost("mm.unet.unity3d.com", 443, true);//Connect to multiplayer service
                     Debug.Log("Name:" + matchName);
@@ -134,8 +133,6 @@ public class GameController : MonoBehaviour
 
                     manager.matchName = match.name;
                     manager.matchSize = (uint)match.currentSize;
-                    manager.playerPrefab = playerPrefabs[1];
-                    Debug.Log(playerPrefabs[1].name);
                     /* PARAMETERS for CreateMatch()
                      * netID: The network identity of the match to be joined
                      * matchPassword: Password required to join this room (Will never be used...for now)

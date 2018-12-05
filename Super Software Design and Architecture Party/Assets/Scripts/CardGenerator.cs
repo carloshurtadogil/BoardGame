@@ -14,8 +14,8 @@ public class CardGenerator : MonoBehaviour
     void Start()
     {
         ScaleCards();
-        StartCoroutine("Draw");
-        Debug.Log("Value: " + value);
+        //StartCoroutine("Draw");
+        //Debug.Log("Value: " + value);
     }
 
     // Update is called once per frame

@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class GameMaster : NetworkBehaviour {
 
     private GameObject[] players;
+    [SyncVar]
     private int currentAmount;
+    [SyncVar]
     private int newAmount;
     private int spawnIndex;
-    public Button draw;
     public GameObject[] spawnPoints;
     public GameObject[] characters;
 
@@ -23,25 +24,24 @@ public class GameMaster : NetworkBehaviour {
     void Start () {
         players = GameObject.FindGameObjectsWithTag("Player");
         Debug.Log("There are " + players.Length + " players on the field");
-        draw.onClick.AddListener(Draw);
         currentAmount = 0;
         newAmount = 0;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {/*
 		if(players.Length == 0) {
             players = GameObject.FindGameObjectsWithTag("Player");
             float count = 0.0f;
 
             //Debug.Log("There are " + players.Length + " players on the field");
-        }
+        }*/
         newAmount = NetworkServer.connections.Count;
 
-        if(newAmount != currentAmount) {
-            currentAmount = newAmount;
-            players[0].transform.position = spawnPoints[0].transform.position;
-            Debug.Log("There are " + newAmount + " connections");
+        if(currentAmount < newAmount) {
+            AddPlayers();
+
             //RpcSpawn();
             //CmdSpawn();
         }
@@ -54,7 +54,13 @@ public class GameMaster : NetworkBehaviour {
         }
     }
 
+    void AddPlayers() {
+        currentAmount++;
+    }
 
+    public int GetCurrentAmount() {
+        return currentAmount;
+    }
 
     [ClientRpc]
     void RpcSpawn() {
