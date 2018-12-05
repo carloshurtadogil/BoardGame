@@ -26,6 +26,8 @@ public class FollowPath : NetworkBehaviour
     #endregion //Public Variables
 
     #region Private Variables
+    [SyncVar]
+    private int newAmount;
     private IEnumerator<Transform> pointInPath; //Used to reference points returned from MyPath.GetNextPathPoint
     private Animator animator;
     private int spaces = 0;
@@ -43,16 +45,14 @@ public class FollowPath : NetworkBehaviour
     #region Main Methods
     void Start()
     {
+        newAmount = 0;
         if (isLocalPlayer)
         {
             cg = GameObject.FindWithTag("Card Generator").GetComponent<CardGenerator>();
             //gameObject.transform.position = MyPath.PathSequence[0].transform.position;
             animator = GetComponent<Animator>();
             Debug.Log("Player Position: " + gameObject.transform.position);
-            Quaternion q = Quaternion.Euler(12.0f, 0, 0);
-            Camera.main.transform.position = new Vector3(0.0f, 15.0f, -20f); //this.transform.position*10 - this.transform.forward * 20 + this.transform.up *10;
-            Camera.main.transform.rotation = q;//LookAt(this.transform.position*20);
-            Camera.main.transform.parent = this.transform;
+
             //Make sure there is a path assigned
             if (MyPath == null)
             {
@@ -207,13 +207,8 @@ public class FollowPath : NetworkBehaviour
         //canMove = true;
     }
 
-    public override void OnStartLocalPlayer()
-    {
-        Debug.Log("Reached Local");
-        StartCoroutine("Waiting");
-
-        Debug.Log("1 Server: " + connectionToServer.address);
-
+    public int ScanField() {
+        return GameObject.FindGameObjectsWithTag("Player").Length;
     }
 
     [Command]
@@ -235,23 +230,24 @@ public class FollowPath : NetworkBehaviour
     public IEnumerator Waiting() {
         yield return new WaitForSeconds(5);
         if (isLocalPlayer) {
-            gm = GameObject.FindGameObjectWithTag("Master").GetComponent<GameMaster>();
-            int connections = NetworkServer.connections.Count;
-            Debug.Log("Waiting: Currently there are " + connections + " players on the field");
-            if (connections == 1)
+            int count = ScanField();
+            Debug.Log("Found " + count + " Players");
+            /*
+            Debug.Log("Count Returned "+ count);
+            if (count == 1)
             {
                 CmdSpawn(0, 0);
             }
 
-            if (connections == 2)
+            if (count == 2)
             {
                 CmdSpawn(2, 1);
             }
 
-            if (connections == 3)
+            if (count == 3)
             {
                 CmdSpawn(4, 2);
-            }
+            }*/
         }
 
     }

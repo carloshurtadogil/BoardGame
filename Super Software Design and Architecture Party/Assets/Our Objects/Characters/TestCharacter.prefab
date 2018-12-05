@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 114723716315922654}
   - component: {fileID: 114884535930602306}
   - component: {fileID: 114946094261069124}
+  - component: {fileID: 114368444119099214}
   m_Layer: 0
   m_Name: TestCharacter
   m_TagString: Player
@@ -1352,6 +1353,32 @@ MonoBehaviour:
   m_animator: {fileID: 95505498789247894}
   m_rigidBody: {fileID: 54896554260546544}
   m_controlMode: 0
+--- !u!114 &114368444119099214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682189731081722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d801c8d501b04256ba74027e5364578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodySkins:
+  - {fileID: 2100000, guid: 8d74c62051dcbe24eb59170e3cceb73e, type: 2}
+  - {fileID: 2100000, guid: bd75ba915e394c343acd96533c381172, type: 2}
+  - {fileID: 2100000, guid: 88b484b1e3c2abd44a352bc5d2ada0b3, type: 2}
+  - {fileID: 2100000, guid: 68d0a373ed3c280469bb04616304a9aa, type: 2}
+  headSkins:
+  - {fileID: 2100000, guid: e639426dff5dcfa40bf254c0ffc5f841, type: 2}
+  - {fileID: 2100000, guid: 12eab110a8b00b24bb5546781ef1e5cb, type: 2}
+  - {fileID: 2100000, guid: f4decb552865b9f44ab08258fe432b8f, type: 2}
+  - {fileID: 2100000, guid: 742160edd8675fe4692a0e2da71f7e6b, type: 2}
+  spawnPoints:
+  - {fileID: 1404764160864522, guid: a8a39d00055de41e9b5aa6592651d8d4, type: 2}
+  - {fileID: 1270718270489724, guid: 680935d07a4aa44ddb4e54d1cbfa206e, type: 2}
+  - {fileID: 1289329991957792, guid: 638dc057471ee416cbc03d24fefa45f2, type: 2}
+  - {fileID: 1499389198955944, guid: e5e13e53094ab461c932885d5e7e6222, type: 2}
 --- !u!114 &114512887640134850
 MonoBehaviour:
   m_ObjectHideFlags: 1
