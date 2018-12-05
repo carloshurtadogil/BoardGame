@@ -86,6 +86,10 @@ GameObject:
   - component: {fileID: 54406639867547696}
   - component: {fileID: 65124733932405156}
   - component: {fileID: 114449980923866478}
+  - component: {fileID: 114570673735214362}
+  - component: {fileID: 114339058489356730}
+  - component: {fileID: 114105368632532202}
+  - component: {fileID: 114976575472362396}
   m_Layer: 0
   m_Name: McDee
   m_TagString: Player
@@ -1302,13 +1306,50 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114449980923866478
+--- !u!114 &114105368632532202
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1068156261414320}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0418614ce60690b4481207dbd3382285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  pathObject: {fileID: 1068156261414320}
+  MyPath: {fileID: 114393144873401292, guid: 1ff5aa800d1ed604883a71e82231543a, type: 2}
+  Speed: 20
+  MaxDistanceToGoal: 0.1
+--- !u!114 &114339058489356730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068156261414320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114449980923866478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068156261414320}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32ca30c36b506c64aafa127f12f968fa, type: 3}
   m_Name: 
@@ -1319,6 +1360,57 @@ MonoBehaviour:
   m_animator: {fileID: 95188182895920304}
   m_rigidBody: {fileID: 54406639867547696}
   m_controlMode: 0
+--- !u!114 &114570673735214362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068156261414320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 181
+    i1: 144
+    i2: 133
+    i3: 18
+    i4: 19
+    i5: 235
+    i6: 212
+    i7: 112
+    i8: 154
+    i9: 156
+    i10: 41
+    i11: 62
+    i12: 7
+    i13: 204
+    i14: 89
+    i15: 199
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114976575472362396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068156261414320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95188182895920304}
+  m_ParameterSendBits: 23
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!137 &137541979442109652
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -416,6 +416,8 @@ GameObject:
   - component: {fileID: 114976454227435026}
   - component: {fileID: 114985746537552722}
   - component: {fileID: 114287199073438214}
+  - component: {fileID: 114111177592354926}
+  - component: {fileID: 114964343778930800}
   m_Layer: 0
   m_Name: MaleFree1
   m_TagString: Player
@@ -1304,6 +1306,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114111177592354926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593341411408318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0418614ce60690b4481207dbd3382285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  pathObject: {fileID: 1593341411408318}
+  MyPath: {fileID: 114393144873401292, guid: 1ff5aa800d1ed604883a71e82231543a, type: 2}
+  Speed: 20
+  MaxDistanceToGoal: 0.1
 --- !u!114 &114287199073438214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1325,13 +1343,32 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114976454227435026
+--- !u!114 &114964343778930800
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1593341411408318}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95819257630988296}
+  m_ParameterSendBits: 23
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
+--- !u!114 &114976454227435026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593341411408318}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32ca30c36b506c64aafa127f12f968fa, type: 3}
   m_Name: 
@@ -1373,7 +1410,7 @@ MonoBehaviour:
     i14: 165
     i15: 206
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!137 &137827910551601448
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -12,7 +12,10 @@ public class GameController : MonoBehaviour
     public Text textGUI;
     public NetworkManager manager;
     private string matchName ;
-    public uint matchSize = 5;
+    public uint matchSize = 4;
+    private NetworkConnection conn;
+    public GameObject[] playerPrefabs;
+    public NetworkStartPosition[] positions;
 
     NetworkMatch networkMatch;
 
@@ -26,7 +29,9 @@ public class GameController : MonoBehaviour
     void Start()
     {
         manager.StartMatchMaker();//Start matchmaker
-
+        foreach(NetworkStartPosition pos in positions) {
+            NetworkManager.RegisterStartPosition(pos.transform);
+        }
         create.onClick.AddListener(CreateMatch);
         join.onClick.AddListener(Join);
     }
@@ -46,8 +51,11 @@ public class GameController : MonoBehaviour
                 {
                     create.gameObject.SetActive(false);
                     join.gameObject.SetActive(false);
+                    manager.playerPrefab = playerPrefabs[0];
+                   
                     manager.SetMatchHost("mm.unet.unity3d.com", 443, true);//Connect to multiplayer service
                     Debug.Log("Name:" + matchName);
+                    var p = manager.startPositions;
                     /* PARAMETERS for CreateMatch()
                      * matchName: roomName which will be based off the user who created the room
                      * matchSize: The amount of players that will be in a room after host "cuts off" the roster
@@ -126,7 +134,8 @@ public class GameController : MonoBehaviour
 
                     manager.matchName = match.name;
                     manager.matchSize = (uint)match.currentSize;
-
+                    manager.playerPrefab = playerPrefabs[1];
+                    Debug.Log(playerPrefabs[1].name);
                     /* PARAMETERS for CreateMatch()
                      * netID: The network identity of the match to be joined
                      * matchPassword: Password required to join this room (Will never be used...for now)
@@ -139,7 +148,6 @@ public class GameController : MonoBehaviour
                     //manager.matchMaker.JoinMatch(match.networkId, "", "", "", 0, 0, OnJoinInternetMatch);
                     //NetworkManager.singleton.matchMaker.JoinMatch(match.networkId, "", "", "", 0, 0, OnJoinInternetMatch);
                     networkMatch.JoinMatch(match.networkId, "", "", "", 0, 0, OnJoinInternetMatch);
-                    reached = true;
                     break;
                 }
                 count++;
@@ -182,6 +190,7 @@ public class GameController : MonoBehaviour
             }
         }
     }
+
 
 }
 

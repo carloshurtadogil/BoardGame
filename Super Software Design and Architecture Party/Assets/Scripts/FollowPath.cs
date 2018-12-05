@@ -25,8 +25,11 @@ public class FollowPath : NetworkBehaviour
     private IEnumerator<Transform> pointInPath; //Used to reference points returned from MyPath.GetNextPathPoint
     private Animator animator;
     private int spaces = 0;
+    private int current;
+    private int movingTo;
     private bool canMove = false;
     private bool isTurn = true;
+    private bool one = false;
     private CardGenerator cg;
     #endregion //Private Variables
 
@@ -37,9 +40,9 @@ public class FollowPath : NetworkBehaviour
         if (isLocalPlayer)
         {
             cg = GameObject.FindWithTag("Card Generator").GetComponent<CardGenerator>();
-            gameObject.transform.position = MyPath.PathSequence[0].transform.position;
+            //gameObject.transform.position = MyPath.PathSequence[0].transform.position;
             animator = GetComponent<Animator>();
-            Debug.Log("Player: "+gameObject.transform.position);
+            Debug.Log("Player Position: " + gameObject.transform.position);
             Quaternion q = Quaternion.Euler(12.0f, 0, 0);
             Camera.main.transform.position = new Vector3(0.0f, 15.0f, -20f);//this.transform.position*10 - this.transform.forward * 20 + this.transform.up *10;
             Camera.main.transform.rotation = q;//LookAt(this.transform.position*20);
@@ -55,10 +58,8 @@ public class FollowPath : NetworkBehaviour
 
             //Sets up a reference to an instance of the coroutine GetNextPathPoint
             pointInPath = MyPath.GetNextPathPoint();
-            Debug.Log(pointInPath.Current);
             //Get the next point in the path to move to (Gets the Default 1st value)
             pointInPath.MoveNext();
-            Debug.Log(pointInPath.Current);
 
             //Make sure there is a point to move to
             if (pointInPath.Current == null)
@@ -70,6 +71,8 @@ public class FollowPath : NetworkBehaviour
             //Set the position of this object to the position of our starting point
             transform.position = pointInPath.Current.position;
             Draw();
+            movingTo = MyPath.movingTo;
+            current = movingTo - 1;
         }
     }
 
@@ -78,7 +81,7 @@ public class FollowPath : NetworkBehaviour
     //Update is called by Unity every frame
     public void Update()
     {
-        if(canMove && isTurn) {
+        if(spaces > 0 && isTurn && canMove) {
             //gameObject.transform.rotation = Quaternion.Euler(0.0f, gameObject.transform.rotation.y, 0.0f);
             //Validate there is a path with a point in it
             if (pointInPath == null || pointInPath.Current == null)
@@ -142,6 +145,23 @@ public class FollowPath : NetworkBehaviour
                 pointInPath.MoveNext(); //Get next point in MovementPath
             }
             */
+            movingTo = MyPath.movingTo;
+            //Debug.Log("MovingTo: " + movingTo);
+            if(one) {
+                spaces++;
+                one = false;
+            }
+            if (current != (movingTo - 1))
+            {
+                current = movingTo - 1;
+                Debug.Log("Space: " + (current));
+                spaces--; 
+            }
+
+        }
+        else
+        {
+            canMove = false; 
         }
     }
     #endregion //Main Methods
@@ -166,7 +186,11 @@ public class FollowPath : NetworkBehaviour
     {
         StartCoroutine(cg.Draw());
         spaces = cg.getValue();
-        canMove = true;
+        if(spaces == 1) {
+            one = true;
+        }
+        Debug.Log("Moving " + spaces + " Spaces");
+        //canMove = true;
     }
 
     #endregion //Utility Methods
