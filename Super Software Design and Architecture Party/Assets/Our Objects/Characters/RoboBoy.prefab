@@ -264,6 +264,10 @@ GameObject:
   - component: {fileID: 54220967995777054}
   - component: {fileID: 65783058328314394}
   - component: {fileID: 114698687559672076}
+  - component: {fileID: 114202859921545522}
+  - component: {fileID: 114954369228047672}
+  - component: {fileID: 114693023168919174}
+  - component: {fileID: 114791149874728614}
   m_Layer: 0
   m_Name: RoboBoy
   m_TagString: Player
@@ -1302,13 +1306,64 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114698687559672076
+--- !u!114 &114202859921545522
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1432652411589780}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 187
+    i1: 227
+    i2: 205
+    i3: 159
+    i4: 98
+    i5: 136
+    i6: 20
+    i7: 55
+    i8: 153
+    i9: 167
+    i10: 30
+    i11: 76
+    i12: 155
+    i13: 211
+    i14: 109
+    i15: 217
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114693023168919174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432652411589780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95238753587692988}
+  m_ParameterSendBits: 23
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
+--- !u!114 &114698687559672076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432652411589780}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32ca30c36b506c64aafa127f12f968fa, type: 3}
   m_Name: 
@@ -1319,6 +1374,43 @@ MonoBehaviour:
   m_animator: {fileID: 95238753587692988}
   m_rigidBody: {fileID: 54220967995777054}
   m_controlMode: 0
+--- !u!114 &114791149874728614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432652411589780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0418614ce60690b4481207dbd3382285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  pathObject: {fileID: 1432652411589780}
+  MyPath: {fileID: 114393144873401292, guid: 1ff5aa800d1ed604883a71e82231543a, type: 2}
+  Speed: 20
+  MaxDistanceToGoal: 0.1
+--- !u!114 &114954369228047672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432652411589780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!137 &137323850693575896
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
