@@ -150,6 +150,7 @@
      <Compile Include="Assets\FPS_Minigame\FPS Scripts\LocalDeathDisplay.cs" />
      <Compile Include="Assets\FPS_Minigame\FPS Scripts\LocalHealthbar.cs" />
      <Compile Include="Assets\FPS_Minigame\FPS Scripts\PlayerController.cs" />
+     <Compile Include="Assets\FPS_Minigame\FPS Scripts\ScoreBoard.cs" />
      <Compile Include="Assets\FPS_Minigame\FPS Scripts\TimerCountdown.cs" />
      <Compile Include="Assets\Scripts\Addodatabase.cs" />
      <Compile Include="Assets\Scripts\CardGenerator.cs" />
