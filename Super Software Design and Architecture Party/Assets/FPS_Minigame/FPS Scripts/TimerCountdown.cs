@@ -2,35 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class TimerCountdown : MonoBehaviour
+public class TimerCountdown : NetworkBehaviour
 {
-
     [SerializeField] private Text uiText;
-    [SerializeField] private float mainTimer;
+    [SerializeField] private float maxTime;
 
     private float timer;
+
     private bool canCount = true;
-    private bool gameEnd = false;
 
     void Start()
     {
-        timer = mainTimer;
+        timer = maxTime;
     }
+
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0.0f && canCount)
+        if (timer > 0.01f && canCount)
         {
             timer -= Time.deltaTime;
-            uiText.text = timer.ToString("F");
+            UpdateTimeText(timer);
         }
-        else if (timer < 0.1f && gameEnd)
+        else if (timer <= 0.01f)
         {
             canCount = false;
-            gameEnd = false;
-            uiText.text = "0.00";
+            uiText.text = "00.00";
             timer = 0.0f;
         }
+    }
+
+    void UpdateTimeText(float timer)
+    {
+        if (timer < 10.00f)
+            uiText.text = "0" + timer.ToString("F");
+        else
+            uiText.text = timer.ToString("F");
     }
 }

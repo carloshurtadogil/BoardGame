@@ -5,22 +5,20 @@ using System.Collections;
 
 public class Health : NetworkBehaviour
 {
-    [SerializeField] private Text lifeText;
-
+    [SerializeField] private Text deathsText;
     public const int maxHealth = 100;
-    public const int maxLives = 20;
 
     [SyncVar(hook = "OnChangeHealth")]
     public int currentHealth = maxHealth;
-    [SyncVar(hook = "LoseLife")]
-    private int lives;
+    [SyncVar(hook = "UpdateDeathText")]
+    public int deaths;
 
     public RectTransform healthBar;
 
     void Start()
     {
-        lives = maxLives;
-        lifeText.text = lives.ToString();
+        deaths = 0;
+        deathsText.text = deaths.ToString();
     }
 
     public void TakeDamage(int amount)
@@ -42,19 +40,18 @@ public class Health : NetworkBehaviour
         healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
     }
 
-    void LoseLife(int lives)
+    void UpdateDeathText(int deaths)
     {
-        lifeText.text = lives.ToString();
+        deathsText.text = deaths.ToString();
     }
 
     [ClientRpc]
     void RpcRespawn()
     {
-        lives -= 1;
-        LoseLife(lives);
+        deaths += 1;
+        UpdateDeathText(deaths);
         if (isLocalPlayer)
         {
-            // move back to zero location
             transform.position = Vector3.zero;
         }
     }
