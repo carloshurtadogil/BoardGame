@@ -467,11 +467,11 @@ GameObject:
   - component: {fileID: 81892397001681484}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1868997743852712
 GameObject:
   m_ObjectHideFlags: 1
@@ -1390,6 +1390,26 @@ MonoBehaviour:
   MyPath: {fileID: 114393144873401292, guid: 1ff5aa800d1ed604883a71e82231543a, type: 2}
   Speed: 20
   MaxDistanceToGoal: 0.1
+  costumes:
+  - {fileID: 1593341411408318, guid: 6396b595ca97e4913b9c7b21b9cea5ce, type: 2}
+  - {fileID: 1068156261414320, guid: b590851213ebd4709a9c293e07cc59c7, type: 2}
+  - {fileID: 1432652411589780}
+  - {fileID: 1942736281380456, guid: cb126d0a29ce44b5ea8571567ccc5c2f, type: 2}
+  skins:
+  - {fileID: 2100000, guid: 8d74c62051dcbe24eb59170e3cceb73e, type: 2}
+  - {fileID: 2100000, guid: e639426dff5dcfa40bf254c0ffc5f841, type: 2}
+  - {fileID: 2100000, guid: bd75ba915e394c343acd96533c381172, type: 2}
+  - {fileID: 2100000, guid: 12eab110a8b00b24bb5546781ef1e5cb, type: 2}
+  - {fileID: 2100000, guid: 88b484b1e3c2abd44a352bc5d2ada0b3, type: 2}
+  - {fileID: 2100000, guid: f4decb552865b9f44ab08258fe432b8f, type: 2}
+  - {fileID: 2100000, guid: 68d0a373ed3c280469bb04616304a9aa, type: 2}
+  - {fileID: 2100000, guid: 742160edd8675fe4692a0e2da71f7e6b, type: 2}
+  backupCam: {fileID: 1781137564411688, guid: 4634bc80374ea4d8eafa54932d9d3268, type: 2}
+  spawnPoints:
+  - {fileID: 1404764160864522, guid: a8a39d00055de41e9b5aa6592651d8d4, type: 2}
+  - {fileID: 1270718270489724, guid: 680935d07a4aa44ddb4e54d1cbfa206e, type: 2}
+  - {fileID: 1289329991957792, guid: 638dc057471ee416cbc03d24fefa45f2, type: 2}
+  - {fileID: 1499389198955944, guid: e5e13e53094ab461c932885d5e7e6222, type: 2}
 --- !u!114 &114954369228047672
 MonoBehaviour:
   m_ObjectHideFlags: 1

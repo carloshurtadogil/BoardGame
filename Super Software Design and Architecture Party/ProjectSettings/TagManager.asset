@@ -13,6 +13,8 @@ TagManager:
   - MyPath
   - Card Generator
   - PlayerSpawn
+  - Master
+  - Indicator
   layers:
   - Default
   - TransparentFX

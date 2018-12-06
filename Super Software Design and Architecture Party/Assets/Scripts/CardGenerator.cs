@@ -14,8 +14,8 @@ public class CardGenerator : MonoBehaviour
     void Start()
     {
         ScaleCards();
-        StartCoroutine("Draw");
-        Debug.Log("Value: " + value);
+        //StartCoroutine("Draw");
+        //Debug.Log("Value: " + value);
     }
 
     // Update is called once per frame
@@ -46,6 +46,9 @@ public class CardGenerator : MonoBehaviour
             yield return new WaitForSeconds(0.00000000000000000001f);
         }
         dealt.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+
+        yield return new WaitForSeconds(3);
+        Destroy(dealt);
     }
 
     //Return the value of the most recently dealt card

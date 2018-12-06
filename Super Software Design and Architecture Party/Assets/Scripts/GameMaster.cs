@@ -6,75 +6,52 @@ using UnityEngine.UI;
 
 public class GameMaster : NetworkBehaviour {
 
+    [SyncVar]
+    private bool ready;
+    [SyncVar]
+    private bool playersmoving = true;
     private GameObject[] players;
-    private int currentAmount;
-    private int newAmount;
-    private int spawnIndex;
-    public Button draw;
-    public GameObject[] spawnPoints;
-    public GameObject[] characters;
+    [SyncVar (hook = "MovePlayers")]
+    private int player;
 
-    void Awake()
+    void Start()
     {
-        DataManager.SpawnPos = spawnPoints;
-
+        player = 0;
     }
-    // Use this for initialization
-    void Start () {
-        players = GameObject.FindGameObjectsWithTag("Player");
-        Debug.Log("There are " + players.Length + " players on the field");
-        draw.onClick.AddListener(Draw);
-        currentAmount = 0;
-        newAmount = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(players.Length == 0) {
+
+    void Update()
+    {
+        if(!isServer) {
+            return;
+        }
+        if (players == null) {
             players = GameObject.FindGameObjectsWithTag("Player");
-            float count = 0.0f;
-
-            //Debug.Log("There are " + players.Length + " players on the field");
         }
-        newAmount = NetworkServer.connections.Count;
-
-        if(newAmount != currentAmount) {
-            currentAmount = newAmount;
-            players[0].transform.position = spawnPoints[0].transform.position;
-            Debug.Log("There are " + newAmount + " connections");
-            //RpcSpawn();
-            //CmdSpawn();
+        if (players.Length == 2 & !ready) {
+            ready = true;
+            player = 1;
+        }
+        if(ready && playersmoving) {
+            MovePlayers(player);
         }
     }
 
-    void Draw() {
+    void MovePlayers(int _p) {
 
-        if(players.Length > 0) {
-            players[0].GetComponent<FollowPath>().Draw();
-        }
-    }
-
-
-
-    [ClientRpc]
-    void RpcSpawn() {
         if(isLocalPlayer) {
-            Vector3 spawnPoint = Vector3.zero;
-
-            if (spawnPoints != null && spawnPoints.Length > 0) {
-                spawnPoint = spawnPoints[spawnIndex].transform.position;
+            if (player == 1)
+            {
+                Debug.Log("Ready to Plays 1");
+                foreach (GameObject p in players)
+                {
+                    if (p.GetComponent<PlayerData>().GetPlayerID() == 1 && p.GetComponent<PlayerData>().GetNetID() == netId.Value)
+                    {
+                        p.GetComponent<PlayerData>().Move();
+                    }
+                }
+                player++;
+                playersmoving = false;
             }
-            players[spawnIndex].gameObject.transform.position = spawnPoint;
-            spawnIndex++;
         }
-    }
-
-    [Command]
-    public void CmdSpawn()
-    {
-        GameObject go = Instantiate(characters[spawnIndex], spawnPoints[spawnIndex].transform.position, Quaternion.identity);
-        Debug.Log("Name: " + go.name + "\nPosition: " + go.transform.position );
-       //Debug.Log("Connection to Client: "+ NetworkServer.connections[0].co );
-        NetworkServer.SpawnWithClientAuthority(go, connectionToClient);
     }
 }
