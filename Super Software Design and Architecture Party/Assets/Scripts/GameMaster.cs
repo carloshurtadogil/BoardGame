@@ -6,31 +6,52 @@ using UnityEngine.UI;
 
 public class GameMaster : NetworkBehaviour {
 
+    [SyncVar]
+    private bool ready;
+    [SyncVar]
+    private bool playersmoving = true;
     private GameObject[] players;
-    private int spawnIndex;
-    public GameObject[] spawnPoints;
-    public GameObject[] characters;
+    [SyncVar (hook = "MovePlayers")]
+    private int player;
 
-    
-    // Use this for initialization
-    void Start () {
+    void Start()
+    {
+        player = 0;
+    }
+
+    void Update()
+    {
         if(!isServer) {
             return;
         }
-
-        players = GameObject.FindGameObjectsWithTag("Player");
-        Debug.Log("There are " + players.Length + " players on the field");
+        if (players == null) {
+            players = GameObject.FindGameObjectsWithTag("Player");
+        }
+        if (players.Length == 2 & !ready) {
+            ready = true;
+            player = 1;
+        }
+        if(ready && playersmoving) {
+            MovePlayers(player);
+        }
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-    }
 
-    void Draw() {
+    void MovePlayers(int _p) {
 
-        if(players.Length > 0) {
-            players[0].GetComponent<FollowPath>().Draw();
+        if(isLocalPlayer) {
+            if (player == 1)
+            {
+                Debug.Log("Ready to Plays 1");
+                foreach (GameObject p in players)
+                {
+                    if (p.GetComponent<PlayerData>().GetPlayerID() == 1 && p.GetComponent<PlayerData>().GetNetID() == netId.Value)
+                    {
+                        p.GetComponent<PlayerData>().Move();
+                    }
+                }
+                player++;
+                playersmoving = false;
+            }
         }
     }
 }

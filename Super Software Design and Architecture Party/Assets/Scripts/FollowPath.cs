@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class FollowPath : NetworkBehaviour
 {
@@ -23,6 +24,7 @@ public class FollowPath : NetworkBehaviour
     public Material[] skins;
     public GameObject backupCam;
     public GameObject[] spawnPoints;
+    public GameObject indicator;
     #endregion //Public Variables
 
     #region Private Variables
@@ -39,6 +41,7 @@ public class FollowPath : NetworkBehaviour
     private bool one;
     private CardGenerator cg;
     private GameMaster gm;
+    private GameObject te;
     #endregion //Private Variables
 
     // (Unity Named Methods)
@@ -46,6 +49,7 @@ public class FollowPath : NetworkBehaviour
     void Start()
     {
         newAmount = 0;
+        te = new GameObject();
         if (isLocalPlayer)
         {
             cg = GameObject.FindWithTag("Card Generator").GetComponent<CardGenerator>();
@@ -80,6 +84,8 @@ public class FollowPath : NetworkBehaviour
             movingTo = MyPath.movingTo;
             current = movingTo - 1;
             camPos = new Vector3(0.0f, 1.0f, -1.5f);
+            indicator = transform.GetChild(4).gameObject;
+            te = indicator.transform.GetChild(1).gameObject;
         }
     }
 
@@ -93,6 +99,17 @@ public class FollowPath : NetworkBehaviour
             //Debug.Log("Camera Pos: " +  Camera.main.transform.position);
             if (spaces > 0 && isTurn && canMove)
             {
+                indicator.SetActive(true);
+                Text t = indicator.GetComponentInChildren<Text>();
+                if (spaces >= 10)
+                {
+                    t.text = spaces.ToString();
+                }
+                else
+                {
+                    t.text = "0" + spaces;
+                }
+
                 //gameObject.transform.rotation = Quaternion.Euler(0.0f, gameObject.transform.rotation.y, 0.0f);
                 //Validate there is a path with a point in it
                 if (pointInPath == null || pointInPath.Current == null)
@@ -174,6 +191,7 @@ public class FollowPath : NetworkBehaviour
             else
             {
                 canMove = false;
+                indicator.SetActive(false);
             }
         }
 
@@ -204,7 +222,7 @@ public class FollowPath : NetworkBehaviour
             one = true;
         }
         Debug.Log("Moving " + spaces + " Spaces");
-        //canMove = true;
+        canMove = true;
     }
 
     public int ScanField() {

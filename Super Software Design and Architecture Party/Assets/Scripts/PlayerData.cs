@@ -10,11 +10,18 @@ public class PlayerData : NetworkBehaviour {
     public Material[] bodySkins;
     public Material[] headSkins;
     public GameObject[] spawnPoints;
+    public CardGenerator cg;
+
 
     private bool startScanning;
+    [SyncVar]
+    private bool tts;
+    private bool isTurn;
     private int newScan;
     private int playerId;
     private int playersInRoom;
+    private NetworkInstanceId id;
+
 
     void Start()
     {
@@ -23,27 +30,44 @@ public class PlayerData : NetworkBehaviour {
             Camera.main.transform.position = new Vector3(0.0f, 15.0f, -20f); //this.transform.position*10 - this.transform.forward * 20 + this.transform.up *10;
             Camera.main.transform.rotation = q;//LookAt(this.transform.position*20);
             Camera.main.transform.parent = this.transform;
+            id = netId;
+            Debug.Log("ID: " + id.Value);
             //StartCoroutine("CharacterUpdate");
         }
     }
 
     void Update()
     {
-        if(!isLocalPlayer) {
-            return;
-        }
+        tts = true;
+        if (isLocalPlayer) {
+            if(Input.GetKeyDown("p")) {
+                Move();
+            }
+            if (startScanning)
+            {
+                newScan = ScanForPlayers();
+                if (newScan != playersInRoom)
+                {
+                    playersInRoom = newScan;
 
-        if(startScanning) {
-            newScan = ScanForPlayers();
-            if(newScan != playersInRoom) {
-                playersInRoom = newScan;
-                ReskinOthersInLocal();
+                }
             }
         }
+
+
+    }
+
+    public void Move() {
+        FollowPath p = GetComponent<FollowPath>();
+        p.Draw();
     }
 
     public int ScanForPlayers() {
         return GameObject.FindGameObjectsWithTag("Player").Length;
+    }
+
+    public uint GetNetID() {
+        return id.Value;
     }
 
     public override void OnStartLocalPlayer()
@@ -66,10 +90,11 @@ public class PlayerData : NetworkBehaviour {
             switch (playerId)
             {
                 case 1:
-                    RpcSpawn(0, 0);
+                    RpcSpawn(0, 1);
                     break;
                 case 2:
-                    RpcSpawn(3, 1);
+                    RpcSpawn(3, 2);
+
                     break;
                 case 3:
                     RpcSpawn(2, 2);
@@ -95,6 +120,7 @@ public class PlayerData : NetworkBehaviour {
     //[ClientRpc]
     public void RpcSpawn(int c, int pos)
     {
+        tts = true;
         Debug.Log("RpcSpawn param is " + c);
         SkinnedMeshRenderer r = gameObject.transform.GetComponentInChildren<SkinnedMeshRenderer>();
         Material[] mats = { bodySkins[c], headSkins[c] };
@@ -102,7 +128,6 @@ public class PlayerData : NetworkBehaviour {
         Vector3 spawn = spawnPoints[pos].transform.position;
 
         gameObject.transform.position = new Vector3(spawn.x, gameObject.transform.position.y, spawn.z);
-        Debug.Log("Spawn position is supposed to be " + spawn + "\nActual position is " + gameObject.transform.position);
         startScanning = true;
     }
 
