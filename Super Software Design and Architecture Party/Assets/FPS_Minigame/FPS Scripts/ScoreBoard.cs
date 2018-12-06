@@ -3,14 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreBoard : MonoBehaviour {
+    
+    [SerializeField]
+    GameObject scoreboardItem;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    [SerializeField]
+    Transform scoreboardPlayerList;
+
+    private static bool done;
+
+    void Start()
+    {
+        done = false;
+    }
 	
-	// Update is called once per frame
-	void Update () {
-		
+	void OnEnable()
+    {
+        if(done)
+        {
+            return;
+        }
+        // Get an array of players
+        Player[] players = PlayerManager.GetAllPlayers();
+
+        foreach ( Player player in players)
+        {
+            Debug.Log(player.playerNum + " | " + player.deaths);
+
+            GameObject itemGO = Instantiate(scoreboardItem, scoreboardPlayerList);
+            Debug.Log("otemGO: " + itemGO);
+
+            PlayerScoreboardItem item = itemGO.GetComponent<PlayerScoreboardItem>();
+            Debug.Log(item);
+            if(item != null)
+            {
+                item.Setup(player.playerNum, player.deaths);
+                done = true;
+            }
+        }
 	}
+
+    void OnDisable()
+    {
+        foreach (Transform child in scoreboardPlayerList)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+   
 }

@@ -9,8 +9,11 @@ public class TimerCountdown : NetworkBehaviour
     [SerializeField] private Text uiText;
     [SerializeField] private float maxTime;
 
-    private float timer;
+    [SerializeField] GameObject scoreboard;
+    [SerializeField] GameObject timerboard;
 
+
+    private float timer;
     private bool canCount = true;
 
     void Start()
@@ -26,11 +29,13 @@ public class TimerCountdown : NetworkBehaviour
             timer -= Time.deltaTime;
             UpdateTimeText(timer);
         }
-        else if (timer <= 0.01f)
+        else if (timer <= 0.06f)
         {
             canCount = false;
             uiText.text = "00.00";
             timer = 0.0f;
+            timerboard.SetActive(false);
+            TimesUp();
         }
     }
 
@@ -41,4 +46,12 @@ public class TimerCountdown : NetworkBehaviour
         else
             uiText.text = timer.ToString("F");
     }
+
+    void TimesUp()
+    {
+        scoreboard.SetActive(true);
+        Time.timeScale = 0f;
+    }
 }
+
+
